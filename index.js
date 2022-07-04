@@ -8,7 +8,7 @@ import { MongoClient,ObjectId } from "mongodb";
 import dayjs from"dayjs";
 import bcrypt from "bcrypt";
 import { v4 as uuid } from 'uuid';
-import { postCriar } from './cadastro.js';
+import { postCriar,teste } from './cadastro.js';
 import { postLogin} from './login.js';
 import { getTela1,postSomar,postMenos,getSair} from './paginaPrincipal.js';
 const app = express();
@@ -25,6 +25,8 @@ conexao.then(()=>{
     console.log('Banco de dados conectado')
 
 })
+app.get('/teste',teste)
+
 app.post('/criar',postCriar)
 app.post('/login',postLogin)
 

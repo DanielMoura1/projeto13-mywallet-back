@@ -20,7 +20,9 @@ conexao.then(()=>{
     console.log('Banco de dados conectado')
 
 })
-
+export async function teste(req,res) {
+  res.send('oiii')
+}
 export async function postCriar(req,res) {
     const conta = req.body;
     const userSchema = joi.object({
