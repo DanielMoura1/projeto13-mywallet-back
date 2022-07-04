@@ -39,5 +39,5 @@ app.post('/menos',postMenos)
 
 const PORT =process.env.PORT || 5000;
 app.listen(PORT ,() =>{
-    console.log(chalk.bold.green('O servidor está em pé na porta :'+process.env.porta))
+    console.log(chalk.bold.green('O servidor está em pé na porta :'+PORT))
 })
