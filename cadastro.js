@@ -8,18 +8,15 @@ import { MongoClient,ObjectId } from "mongodb";
 import dayjs from"dayjs";
 import bcrypt from "bcrypt";
 import { v4 as uuid } from 'uuid';
+import db from './data.js';
 const app = express();
 app.use(express.json());
 app.use(cors());
-
 const mongoClient = new MongoClient(process.env.mongo_conect);
-let db;
-const conexao = mongoClient.connect();
-conexao.then(()=>{
-    db = mongoClient.db("projeto13-mywallet");
-    console.log('Banco de dados conectado')
 
-})
+const conexao = mongoClient.connect();
+
+
 export async function teste(req,res) {
   res.send('oiii')
 }

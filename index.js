@@ -15,16 +15,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const mongoClient = new MongoClient(process.env.mongo_conect);
-let db;
-const conexao = mongoClient.connect();
 
-
-conexao.then(()=>{
-    db = mongoClient.db(process.env.mongo_data);
-    console.log('Banco de dados conectado')
-
-})
 app.get('/teste',teste)
 
 app.post('/criar',postCriar)
